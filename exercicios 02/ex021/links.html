@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+
+        /*
+            #   = id
+            .   = classe
+            :   = pseudo-classe
+            ::  = pseudo-elemento
+            >   = clildren
+        */
+            
+        body{
+            font: normal 1em Arial, Helvetica, sans-serif;
+        }
+            
+        a{
+            color: rgb(0, 75, 0);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        a:visited{
+            color: green;
+        }
+
+        a:hover{
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active{
+            color: blue;
+        }
+
+        .especial:hover{
+            color: white;
+            background-color: darkred;
+            text-decoration: none;
+        }
+
+        .especial::before{
+            content: '>>> ';
+            font-weight: lighter;
+        }
+
+        .especial::after{
+            content: ' <<<';
+            font-weight: lighter;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    
+    <p>
+        Para escutar uma música relaxante, clique no link ao lado:
+        <a href="https://www.youtube.com/watch?v=89l5VdZps5E" target="_blank">Video Chill Chill</a>
+    </p>
+    <p>
+        Caso queira outra musica relaxante, clique no link ao lado:
+        <a href="https://www.youtube.com/watch?v=b3KMNIowUSo&list=RDb3KMNIowUSo&start_radio=1" target="_blank">Ottersapace Lofi</a>
+    </p>
+    <p>
+        Caso queira assistir algo para rir, clique no link ao lado:
+        <a href="https://www.youtube.com/watch?v=VXnG5nlFaI0&t=17s" class="especial" target="_blank">FroggTV</a>
+    </p>
+
+</body>
+</html>

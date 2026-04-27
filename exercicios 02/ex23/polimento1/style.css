@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px){
+    
+    nav {
+        text-align: center;
+    }
+
+    .lista ol{
+        grid-template-columns: 1fr; /* vira uma coluna */
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+:root{
+    --cor-primaria: #5269A8;
+    --cor-secundaria: #5c75ba;
+    --cor-fundo: #2F4172;
+    --cor-texto: #304e9e;
+    --cor-destaque: #1749d2d8;
+    --cor-titulo: #7B90C9;
+    --cor-subtitulo: #98b2f7;
+    --cor-conteudo: #617cc4;
+}
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-fundo);
+}
+header{
+    background-image: linear-gradient(to bottom, var(--cor-primaria), var(--cor-secundaria));
+    text-align: center;
+    padding: 30px 0px 5px 0px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.28);
+
+    color: white;
+}
+nav{
+    background-color: var(--cor-secundaria);
+    display: flex; /* transforma o nav em um container flexível (organiza os filhos em linha) */
+    flex-wrap: wrap; /* permite que os itens quebrem linha se não couberem (responsivo) */
+    justify-content: left; /* alinha os links à esquerda (padrão horizontal) */
+    gap: 15px; /* espaço entre os links */
+    padding: 10px; /* espaço interno do nav (respiro nas bordas) */
+}
+
+nav > a{
+    padding: 10px 20px; /* aumenta a área clicável (topo/baixo 10px, lados 20px) */
+
+    color: var(--cor-texto); /* cor do texto */
+    text-decoration: none; /* remove o sublinhado padrão do link */
+    font-weight: bold; /* deixa o texto mais forte */
+
+    background-color: transparent; /* sem fundo inicialmente (invisível) */
+    border-radius: 6px; /* arredonda levemente as bordas (visual mais moderno) */
+
+    transition: all 0.3s ease; /* suaviza qualquer mudança (cor, movimento, etc) */
+}
+
+nav > a:hover{
+    background-color: var(--cor-destaque); /* fundo aparece ao passar o mouse */
+    color: black; /* muda a cor do texto para contraste */
+    transform: translateY(-2px); /* move levemente para cima (efeito de “botão vivo”) */
+}
+
+
+main{
+    background-color: var(--cor-titulo);
+    max-width: 1050px;
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.308);
+}
+
+main p{
+    text-indent: 15px;
+    margin: 10px 0px;
+    text-align: justify;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.cabecalho{
+    padding: 15px 0px;
+}
+
+h3{
+    background-image: linear-gradient(to right, var(--cor-subtitulo), transparent);
+    color: #141F3D;
+}
+
+.fundo{
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: var(--cor-conteudo);
+}
+
+.video{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    width: 100%;
+    max-width: 1050px;
+    aspect-ratio: 16 / 9;
+}
+
+.tabela{
+    border-radius: 10px;
+    background-color: var(--cor-conteudo);
+    margin: 15px;
+}
+
+.tabela > p{
+    padding: 10px;
+}
+
+.titulo{
+    color: white;
+    background-color: var(--cor-primaria);
+    padding: 10px 20px;
+    
+    border-radius: 10px 10px 0px 0px;
+}
+
+.tabela > p {
+    text-indent: 20px;
+    text-align: justify;
+}
+
+.lista ol{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 40px;
+}
+
+footer{
+    background-color: var(--cor-primaria);
+
+    text-align: center;
+    margin: 10px 0px 0px 0px;
+}
+
+img{
+    width: 100%; 
+    height: auto;
+}
