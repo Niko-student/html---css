@@ -3,5 +3,6 @@
 /* aparelho deitado ( landscape ) */
 
 body {
-    background-color: antiquewhite;
+    background: url(../imagens/cev-landscape.jpg);
+    background-position: center bottom;
 }
