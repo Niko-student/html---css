@@ -19,6 +19,7 @@ Grandes Telas: acima de 1200px
     }
 
     main{
+        width: 90vw;
         border: 2px solid black;
     }
 
@@ -26,6 +27,11 @@ Grandes Telas: acima de 1200px
         text-shadow: none;
         color: black;
     }
+
+    main::after {
+        content: 'Esse impressão foi feita nos meus estudos';
+    }
+
     img#phone{ display: none;}
     img#tablet{ display: none;}
     img#print{ display: block;}
